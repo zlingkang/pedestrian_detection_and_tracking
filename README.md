@@ -13,6 +13,8 @@ An optical-flow and Kalman Filter based multiple object tracker, more details: [
 ## Usage
 * Compile ncnn  
 go to 3rd_party/ncnn  
+(When using with ARM platforms such as Raspberry Pi, modify ncnn/CMakeLists.txt: add `add_definitions(-mfpu=neon)`,
+modify ncnn/src/CMakeLists.txt: modify line 40to46 to `if(TRUE)` )  
 `mkdir build`  
 `cd build`  
 `cmake ..`  
